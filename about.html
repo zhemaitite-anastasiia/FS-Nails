@@ -1816,7 +1816,7 @@
                                 <div class="eltdf-separator"> 
                                     <img src="uploads/separator.png"> </div></div>
                         
-                        <div data-node-id="1555842642p1zbh" class="row content-block"><div style="height: 85px;"></div></div>
+                        <div data-node-id="1555842642p1zbh" class="row content-block"><div style="height: 55px;"></div></div>
                         
                             </div>
                             
@@ -1844,12 +1844,25 @@
                                                     
                                                     </div> 
                                                     <style>
-                                                    .responsive-video {
+                                                        @media only screen and (min-width: 600px) {
+
+.responsive-video {
         overflow:hidden;
         position:relative;
         height:0;
         padding-bottom:56.25%;
     }
+}
+@media only screen and (max-width: 600px) {
+
+.responsive-video {
+        overflow:hidden;
+        position:relative;
+        height:0;
+        padding-bottom:86.25%;
+        margin-top: -80px;
+    }
+}
     .video-responsive iframe {
         height:100%;
         width:100%;
