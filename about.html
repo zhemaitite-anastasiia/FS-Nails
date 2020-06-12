@@ -32,6 +32,7 @@
     <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//s.w.org">
+    
      <link rel="alternate" type="application/rss+xml" title="yani » Feed" href="https://demo3.touchsize.com/yani/feed/">
     <link rel="alternate" type="application/rss+xml" title="yani » Comments Feed" href="https://demo3.touchsize.com/yani/comments/feed/"> 
     <link rel="stylesheet" id="wp-block-library-group-css" href="content/plugins/bwp-minify/min/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
@@ -1903,7 +1904,7 @@
                                     <aside class="post-container">
                                                                     <div class="post-content" style="margin-left: 0">
                                                 <p class="post-subtitle" itemprop="description" style="text-align:center;font-size:34px">
-                                     Fancy Shamncy Brand Story.
+                                     The Brand Story.
                                     </p><div class="text-left above-single-content clear" ></div>
                                     
                                     
@@ -2088,94 +2089,176 @@
                     
                     </div></div>
             
-            
+                
             </div></div></div>			
                 
   
 
+<!-- Container for the image gallery -->
+<div class="container">
 
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+            <img src="uploads/v3.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+            <img src="uploads/v2.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+            <img src="uploads/v7.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+            <img src="uploads/v10.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+            <img src="uploads/v11.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+            <img src="uploads/v14.png" style="width:100%">
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <!-- Thumbnail images -->
+      
+      </div>
+      <style>* {
+            box-sizing: border-box;
+          }
+          
+          /* Position the image container (needed to position the left and right arrows) */
+          .container {
+            position: relative;
+          }
+          
+          /* Hide the images by default */
+          .mySlides {
+            display: none;
+          }
+          
+          /* Add a pointer when hovering over the thumbnail images */
+          .cursor {
+            cursor: pointer;
+          }
+          
+          /* Next & previous buttons */
+          .prev,
+          .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+          }
+          
+          /* Position the "next button" to the right */
+          .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+          }
+          
+          /* On hover, add a black background color with a little bit see-through */
+          .prev:hover,
+          .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+          
+          /* Number text (1/3 etc) */
+          .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+          }
+          
+          /* Container for image text */
+          .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+          }
+          
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          
+          /* Six columns side by side */
+          .column {
+            float: left;
+            width: 16.66%;
+          }
+          
+          /* Add a transparency effect for thumnbail images */
+          .demo {
+            opacity: 0.6;
+          }
+          
+          .active,
+          .demo:hover {
+            opacity: 1;
+          }</style>
 
+          <script>var slideIndex = 1;
+                showSlides(slideIndex);
+                
+                // Next/previous controls
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+                
+                // Thumbnail image controls
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("demo");
+                  var captionText = document.getElementById("caption");
+                  if (n > slides.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = slides.length}
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+                  captionText.innerHTML = dots[slideIndex-1].alt;
+                }</script>
 
-
-
-
-            <div class="site-section airkit_expanded-row airkit_vertical-top loaded" style="background-color: rgba(255,255,255,0);text-align: left;margin-top: 0px;margin-bottom: 0px;padding-top: 0px;padding-bottom: 0px;" data-node-id="9hcrbrzfnfjgjm3"><div class="row "><div style=" padding-right:20px; padding-left: 20px; position: relative;" data-node-id="gpgofos9r813jnf" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tb-column">
-                    <div style="background-color: rgba(255, 255, 255, 0); text-align: left;color: #000000; margin-top: 0px;margin-bottom: 0px;padding-top: 0px;padding-bottom: 0px;">
-                        
-                        
-                        <div data-node-id="15667421125m0kr" class="row content-block"><div class="col-lg-12">
-                <div class="airkit_slider slice"> <img class="slice-fake-bg" src="https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/Wedding-couple-love-feelings-flowers_1920x1200-1200x450.jpg">
-                    <ul class="slides"><li class="slide" data-img-sm="https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/Wedding-couple-love-feelings-flowers_1920x1200-400x280.jpg" data-img-lg="https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/Wedding-couple-love-feelings-flowers_1920x1200-1200x450.jpg" style="display: inline-block;">
-                            <div class="slide__content">
-                                <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/Wedding-couple-love-feelings-flowers_1920x1200-1200x450.jpg)"></div></figure>
-                                <div class="slide__header">
-                                    <div class="slide_caption">
-                                        <h2 class="slide__title">
-                                            <span class="title-line"><span><a href="https://demo.themestash.com/nola/gallery/nancy-roy-session/">Nancy &amp; Roy Session</a></span></span>
-                                        </h2>
-                                        <div class="slide__excerpt">How's your head? Marty, don't be such a square. Everybody who's anybody drinks. Mom, Dad. Oh, yeah, yeah.</div>
-                                        <a href="https://demo.themestash.com/nola/gallery/nancy-roy-session/" class="slide__button">View more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li><li class="slide is-prev" data-img-sm="https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/10486-400x280.jpg" data-img-lg="https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/10486-1200x450.jpg">
-                            <div class="slide__content">
-                                <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/10486-1200x450.jpg)"></div></figure>
-                                <div class="slide__header">
-                                    <div class="slide_caption">
-                                        <h2 class="slide__title">
-                                            <span class="title-line"><span><a href="https://demo.themestash.com/nola/gallery/hannan-filip-wedding/">Hannan &amp; Filip Wedding</a></span></span>
-                                        </h2>
-                                        <div class="slide__excerpt">How's your head? Marty, don't be such a square. Everybody who's anybody drinks. Mom, Dad. Oh, yeah, yeah.</div>
-                                        <a href="https://demo.themestash.com/nola/gallery/hannan-filip-wedding/" class="slide__button">View more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li><li class="slide is-active" data-img-sm="https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/sweet-ice-cream-photography-90425-unsplash-400x280.jpg" data-img-lg="https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/sweet-ice-cream-photography-90425-unsplash-1200x450.jpg">
-                            <div class="slide__content">
-                                <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/sweet-ice-cream-photography-90425-unsplash-1200x450.jpg)"></div></figure>
-                                <div class="slide__header">
-                                    <div class="slide_caption">
-                                        <h2 class="slide__title">
-                                            <span class="title-line"><span><a href="https://demo.themestash.com/nola/gallery/lina-frank-session/">Lina &amp; Frank Session</a></span></span>
-                                        </h2>
-                                        <div class="slide__excerpt">How's your head? Marty, don't be such a square. Everybody who's anybody drinks. Mom, Dad. Oh, yeah, yeah.</div>
-                                        <a href="https://demo.themestash.com/nola/gallery/lina-frank-session/" class="slide__button">View more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li><li class="slide is-next" data-img-sm="https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/jeremy-wong-weddings-615245-unsplash-400x280.jpg" data-img-lg="https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/jeremy-wong-weddings-615245-unsplash-1200x450.jpg">
-                            <div class="slide__content">
-                                <figure class="slide__figure"><div class="slide__img" style="background-image: url(https://demo.themestash.com/nola/wp-content/uploads/sites/3/2019/04/jeremy-wong-weddings-615245-unsplash-1200x450.jpg)"></div></figure>
-                                <div class="slide__header">
-                                    <div class="slide_caption">
-                                        <h2 class="slide__title">
-                                            <span class="title-line"><span><a href="https://demo.themestash.com/nola/gallery/diana-jordan-wedding/">Diana &amp; Jordan Wedding</a></span></span>
-                                        </h2>
-                                        <div class="slide__excerpt">How's your head? Marty, don't be such a square. Everybody who's anybody drinks. Mom, Dad. Oh, yeah, yeah.</div>
-                                        <a href="https://demo.themestash.com/nola/gallery/diana-jordan-wedding/" class="slide__button">View more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                <div class="slides-nav">
-                    <nav class="slides-nav__nav">
-                        <button class="slides-nav__prev js-prev">Previous</button>
-                        <button class="slides-nav__next js-next">Next</button>
-                    </nav>
-                </div><div class="slides-info"><strong>3</strong> of <em>4</em></div>
-                    
-                </div></div></div>
-                    </div>
-                    
-                </div></div></div>
-
-
-
-
-
+       
 
 
 
@@ -2344,8 +2427,7 @@
     var google_remarketing_only = true;
     /* ]]> */
     </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-    </script>
+ 
     <noscript>
     <div style="display:inline;margin:0;padding:0;margin-bottom:-10px;">
     <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/988374737/?value=0&guid=ON&script=0"/>
@@ -2850,6 +2932,8 @@
     /* ]]> */
     </script>
     <script type="text/javascript" src="content/themes/yani/js/scripting.js"></script>
+    <script type="text/javascript" src="content/themes/yani/js/scripts.js"></script>
+    <script type="text/javascript" src="content/themes/yani/js/try.js"></script>
     <script type="text/javascript" src="content/themes/yani/js/parallax-img.js"></script>
     <script type="text/javascript" src="content/themes/yani/js/baslider.js"></script>
     <script type="text/javascript" src="content/themes/yani/js/jquery.splitting.min.js"></script>
